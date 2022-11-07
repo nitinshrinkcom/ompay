@@ -1,0 +1,536 @@
+.wizardFormBox {
+  height: 100vh;
+  width: 100%;
+  background: url("../img/Payment-Gateways.jpg") no-repeat center;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+.tyWizardBox {
+  overflow: hidden;
+}
+.wizardFormBox .form-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.wizardFormBox .form-box .form-wizard {
+  max-height: 800px;
+  max-width: 1000px;
+}
+
+.col-sm-12.col-md-12.col-lg-12.form-wizard.formwizardBg {
+  background: #e9ecefde;
+  border-radius: 10px;
+  border: 2px solid #dddd;
+}
+
+.wizardFormBox .sucessBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translate(0%, 50%);
+  background: #e9ecefde;
+  width: 75%;
+  margin: auto;
+  padding: 25px;
+  box-shadow: 0px 0px 4px 0px rgba(255, 255, 255, 0.8);
+  display: none;
+}
+
+.success-animation {
+  margin: 15px auto;
+}
+
+.checkmark {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  box-shadow: inset 0px 0px 0px #4bb71b;
+  animation: fill 0.4s ease-in-out 0.4s forwards,
+    scale 0.3s ease-in-out 0.9s both;
+  position: relative;
+  top: 5px;
+  right: 5px;
+  margin: 0 auto;
+}
+.checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #fff;
+  fill: #4bb71b;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+.sucessBox h2 {
+  color: #2748c9;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.sucessBox p {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: #2748c9;
+  font-weight: 500;
+  padding-bottom: 15px;
+}
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes scale {
+  0%,
+  100% {
+    transform: none;
+  }
+
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px #4bb71b;
+  }
+}
+
+img.wizardLogo.img-fluid {
+  width: auto;
+  height: 100px;
+}
+
+.wizardFormBox section.form-box {
+  background: none;
+}
+
+/* ========== Progress Bar ========== */
+.progressbar {
+  margin: 25px 20px 25px 0;
+  counter-reset: step;
+}
+.progressbar li {
+  list-style-type: none;
+  width: 10.5%;
+  float: left;
+  font-size: 18px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  color: #16247d;
+  z-index: 1;
+}
+.progressbar li:before {
+  width: 15px;
+  height: 15px;
+  content: "";
+  line-height: 30px;
+  border: 2px solid #16247d;
+  background-color: #16247d;
+  display: block;
+  text-align: center;
+  margin: 0 auto 10px auto;
+  border-radius: 50%;
+  transition: all 0.8s;
+  z-index: 998;
+  position: relative;
+}
+.progressbar li:after {
+  width: 100%;
+  height: 2px;
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  top: 7px;
+  left: -43.5%;
+  z-index: 0;
+  transition: all 0.8s;
+}
+.progressbar li:first-child:after {
+  content: none;
+}
+.progressbar li.active:before {
+  border-color: #16247d;
+  background-color: #16247d;
+  transition: all 0.8s;
+  z-index: 1;
+}
+.progressbar li.active:after {
+  background-color: #16247d;
+  transition: all 0.8s;
+}
+
+@media (max-width: 360px) {
+  .wizardFormBox .form-wizard-buttons.d-block.m-auto.mt-3.px-3.w-50 {
+    width: 100% !important;
+  }
+
+  .wizardFormBox .fa-arrow-right:before {
+    content: "\f061";
+    font-size: 12px;
+  }
+
+  .wizardFormBox .fa-arrow-left:before {
+    font-size: 12px;
+  }
+
+  .wizardFormBox
+    .form-wizard-buttons.d-flex.flex-row.justify-content-center.w-100.align-items-center.px-5.mx-3.mt-3 {
+    margin: 5px 0px !important;
+    padding: 10px !important;
+  }
+
+  .wizardFormBox .form-wizard .btn {
+    height: 40px;
+    margin: 0;
+    padding: 0px 5px !important;
+    vertical-align: middle;
+    border: 0;
+    font-family: "Barlow Condensed";
+    font-size: 16px;
+    font-weight: 300;
+    background: rgb(15 43 83);
+    line-height: 40px;
+    color: #fff;
+    border-radius: 4px;
+    text-shadow: none;
+    box-shadow: none;
+    transition: all 0.3s;
+  }
+
+  .progressbar li {
+    list-style-type: none;
+    width: 11%;
+    float: left;
+    font-size: 16px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    color: #16247d;
+    z-index: 1;
+  }
+
+  .progressbar li:after {
+    width: 60%;
+    height: 2px;
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    top: 7px;
+    left: -29%;
+    z-index: 0;
+    transition: all 0.7s;
+  }
+
+  .customh3 {
+    font-size: 1.3rem !important;
+    padding-top: 20px !important;
+  }
+
+  .wizardFormBox h3 {
+    font-size: 20px;
+  }
+  .wizardFormBox p.text-justify.boxparaText {
+    font-size: 1.1rem !important;
+    font-weight: 500 !important;
+    color: #328aea !important;
+    padding: 2px 0 0 21px;
+}
+  .wizardFormBox img.checkBoxImage.img-fluid.img-responsive {
+    width: 25px;
+    height: 33px;
+    margin: 0 6px;
+}
+
+
+}
+
+@media (min-width: 361px) and (max-width: 420px) {
+  .customh3 {
+    font-size: 1.6rem !important;
+    padding-top: 25px !important;
+    /* padding-left: 25px; */
+  }
+
+  .wizardFormBox .form-wizard .btn {
+    background: rgb(36 89 124);
+    height: 40px;
+    margin: 0;
+    padding: 0px 5px !important;
+    vertical-align: middle;
+    border: 0;
+    font-family: "Barlow Condensed";
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 40px;
+    color: #fff;
+    border-radius: 4px;
+    text-shadow: none;
+    box-shadow: none;
+    transition: all 0.3s;
+  }
+
+  .wizardFormBox .progressbar li {
+    list-style-type: none;
+    width: 11%;
+    float: left;
+    font-size: 18px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    color: #16247d;
+    z-index: 1;
+  }
+
+  .wizardFormBox .progressbar li:after {
+    width: 64%;
+    height: 2px;
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    top: 7px;
+    left: 69%;
+    z-index: 0;
+    transition: all 0.8s;
+  }
+
+  .wizardFormBox p.text-justify.boxparaText {
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    color: #328aea !important;
+    padding: 3px 0 0 20px;
+  }
+  .wizardFormBox h3 {
+    font-size: 24px;
+  }
+}
+
+.radio-toolbar {
+  margin: 10px;
+}
+
+.radio-toolbar input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+.radio-toolbar label {
+  display: inline-block;
+  background-color: #ddd;
+  padding: 5px 20px;
+  font-family: sans-serif, Arial;
+  font-size: 16px;
+  border: 2px solid #4444442e;
+  border-radius: 4px;
+  margin: 0px 15px;
+  min-width: 100px;
+  text-align: center;
+}
+
+.radio-toolbar label:hover {
+  background-color: #24597c7d;
+}
+
+.radio-toolbar input[type="radio"]:focus + label {
+  border: 2px solid #000;
+}
+
+.radio-toolbar input[type="radio"]:checked + label {
+  background-color: #24597c;
+  border-color: #24597c;
+  color: #fff;
+}
+
+.customh3 {
+  font-size: 2.3rem;
+  padding-top: 25px;
+  padding-left: 25px;
+}
+
+p.text-justify.boxparaText {
+    font-size: 1.1rem !important;
+    font-weight: 500 !important;
+    color: #328aea !important;
+    padding: 2px 40px;
+}
+
+img.checkBoxImage.img-fluid.img-responsive {
+  width: 38px;
+  height: 38px;
+  margin: 0 4px;
+}
+
+@media (max-width: 320px) {
+  .wizardFormBox .sucessBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translate(0%, 5%);
+    background: #e9ecefde;
+    width: 94%;
+    margin: auto;
+    padding: 26px;
+    box-shadow: 0px 0px 4px 0px rgb(255 255 255 / 80%);
+    display: none;
+  }
+
+  .sucessBox p {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #2748c9;
+    font-weight: 500;
+    padding-bottom: 12px;
+}
+
+.col-sm-12.col-md-12.col-lg-12.form-wizard.formwizardBg {
+  margin-left: 7px !important;
+  background: #e9ecefde;
+  border-radius: 10px;
+  border: 2px solid #dddd;
+}
+
+  
+.buttonTransparentcust{
+  width: 92px !important;
+  bottom: 11px !important;
+  left: 79px;
+  padding: 4.6px;
+}
+.buttonTransparentcustOne{
+  width: 92px !important;
+  bottom: 11px !important;
+  left: 79px;
+  padding: 4.6px;
+}
+
+}
+
+@media (min-width: 320px) and (max-width: 420px) {
+  .wizardFormBox .sucessBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translate(0%, 15%);
+    background: #e9ecefde;
+    width: 90%;
+    margin: auto;
+    padding: 25px;
+    box-shadow: 0px 0px 4px 0px rgb(255 255 255 / 80%);
+    display: none;
+}
+
+.sucessBox p {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #2748c9;
+  font-weight: 500;
+  padding-bottom: 13px;
+}
+}
+
+.customButtonTransparent {
+  z-index: 9999;
+  position: absolute;
+  background: transparent;
+  width: 215px;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  right: 72px;
+  bottom: -1px;
+}
+
+.buttonTransparentcust {
+  background: transparent;
+  width: 289px;
+  position: absolute;
+  bottom: 1px;
+  border: none;
+  right: 65px;
+  padding: 4.2px;
+  z-index: 99999;
+}
+
+.buttonTransparentcustOne {
+  background: transparent;
+  width: 289px;
+  position: absolute;
+  bottom: 1px;
+  border: none;
+  right: 45px;
+  padding: 4.2px;
+  z-index: 99999;
+}
+
+
+@media(min-width: 360px) and (max-width: 420px) {
+  .customButtonTransparent{
+    width: 79px;
+    right: 18px;
+    bottom: 0px;
+  }
+
+  .buttonTransparentcust{
+    width: 80px;
+    bottom: 3px;
+    left: 126px;
+    padding: 5.5px;
+  }
+  .buttonTransparentcustOne{
+    width: 80px;
+    bottom: 3px;
+    left: 126px;
+    padding: 5.5px;
+  }
+}
+
+@media(min-width: 540px) and (max-width: 1024px){
+  .buttonTransparentcust{ 
+    width:153px;
+    right: 48px;
+    padding: 4.5px
+  }
+  .buttonTransparentcustOne{ 
+    width:153px;
+    right: 48px;
+    padding: 4.5px
+  }
+}
+
+@media(min-width: 1024px) and (max-width: 1280px){
+  .buttonTransparentcust{ 
+    width:204px;
+    right: 20px;
+    padding: 4.5px
+  }
+  .buttonTransparentcustOne{ 
+    width:204px;
+    right: 20px;
+    padding: 4.5px
+  }
+}

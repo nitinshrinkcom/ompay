@@ -1,0 +1,274 @@
+.settings, .updatePass {
+  background: #fff;
+}
+.setting input:focus {
+  border: 1px solid rgb(36, 86, 248);
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.6);
+}
+
+.updatePass input:focus {
+  border: 1px solid rgb(36, 86, 248);
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.6);
+}
+.profile-left {
+  margin-top: 10px;
+  height: 100vh;
+  box-shadow: 0px 0px 10px 0px #cccccc6b;
+}
+
+.profile-left .user-profile {
+  margin-top: 8px;
+}
+
+.profile-left .user-profile img {
+  display: block;
+  margin: auto;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+.profile-left ul li {
+  padding: 0 10px;
+  margin: 10px 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  font-family: "Barlow Condensed", sans-serif;
+  border-bottom: 1px solid #22552212;
+}
+
+.profile-left ul li i {
+  font-size: 1.3rem !important;
+  padding: 0 5px;
+}
+
+.profile-left .profile-usermenu #setStatus {
+  color: rgb(21, 184, 21);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 3px;
+}
+
+.profile-right {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: #fff;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.profile-right h3 {
+  margin-top: 10px;
+}
+
+.profile-right label {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1rem;
+}
+
+/* Responsiveness for update Pass section */
+@media only screen and (max-width: 360px) {
+  .updatePass .profile-left .profile-usermenu .status {
+    display: none;
+  }
+
+  .updatePass .profile-left {
+    max-height: 100vh;
+  }
+  .updatePass .profile-right {
+    max-height: 100vh;
+    margin-top: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .updatePass .profile-right h2.text-center.text-lg-center.text-md-center {
+    margin-top: 15px;
+  }
+
+  .updatePass .profile-right label {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 0.3rem;
+  }
+
+  .updatePass .profile-right button#passChange {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+
+  .updatePass p#emptyError {
+    font-size: 0.7rem;
+  }
+
+  .updatePass p#passError {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .updatePass .profile-left .profile-usermenu .status {
+    display: none;
+  }
+
+  .updatePass .profile-left {
+    max-height: 100vh;
+  }
+  .updatePass .profile-right {
+    max-height: 100vh;
+    margin-top: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .updatePass .profile-right h2.text-center.text-lg-center.text-md-center {
+    margin-top: 15px;
+  }
+
+  .updatePass .profile-right label {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 0.8rem;
+  }
+
+  .updatePass .profile-right button#passChange {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+
+  .updatePass p#emptyError {
+    font-size: 0.7rem;
+  }
+
+  .updatePass p#passError {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .updatePass .profile-usermenu ul li {
+    font-size: 1.3rem;
+  }
+  .updatePass .profile-left .profile-usermenu .status {
+    display: none;
+  }
+
+  .updatePass .profile-left {
+    max-height: 100vh;
+  }
+  .updatePass .profile-right {
+    max-height: 76vh;
+    margin-top: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .updatePass .profile-right h2.text-center.text-lg-center.text-md-center {
+    font-size: 1.9rem;
+    margin-top: 15px;
+  }
+
+  .updatePass .profile-right label {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 0.95rem;
+  }
+
+  .updatePass .profile-right button#passChange {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .updatePass p#emptyError {
+    font-size: 0.7rem;
+  }
+
+  .updatePass p#passError {
+    font-size: 0.7rem;
+  }
+}
+
+/* Responsiveness for Chnage Settings section */
+
+@media (max-width: 360px) {
+  .profile-left {
+    margin-top: 10px !important;
+    background: #fff;
+    max-height: 88vh !important;
+    padding-left: 13px;
+  }
+  .profile-left .profile-usermenu #setStatus {
+    display: none;
+  }
+
+  .profile-right.px-2 {
+    margin-top: 15px !important;
+    margin-bottom: 10px;
+  }
+
+  h2.text-center.text-lg-center.text-md-center {
+    margin-top: 15px;
+    font-size: 1.5rem;
+  }
+
+  h3.text-left.headingI.mt-3 {
+    font-size: 1rem;
+  }
+
+  h3.text-left.headingI {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .profile-left {
+    background: #fff;
+    max-height: 78vh;
+    padding-left: 10px;
+  }
+  .profile-left .profile-usermenu #setStatus {
+    display: none;
+  }
+
+  .profile-right.px-2 {
+    margin-top: 15px !important;
+    margin-bottom: 10px;
+  }
+
+  h2.text-center.text-lg-center.text-md-center {
+    font-size: 1.8rem;
+    margin-top: 10px;
+  }
+
+  h3.text-left.headingI.mt-3 {
+    font-size: 1.4rem;
+  }
+
+  h3.text-left.headingI {
+    font-size: 1.6rem;
+    margin-top: 15px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .profile-left{
+    height: 76vh;
+  }
+
+  .profile-left .profile-usermenu #setStatus {
+    display: none;
+  }
+  .profile-right.px-2 {
+    margin-bottom: 10px;
+    margin-top: 15px !important;
+  }
+
+  h2.text-center.text-lg-center.text-md-center {
+    font-size: 1.8rem;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-left {
+    margin-top: 10px;
+  }
+
+  .profile-right {
+    margin-top: 10px;
+  }
+}

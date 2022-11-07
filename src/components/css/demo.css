@@ -1,0 +1,322 @@
+
+.st0{fill:#DB9770;}
+.st1{fill:#FFC9AA;}
+.st2{fill:#FFFBF9;}
+.st3{fill:#FFFDFB;}
+.st4{opacity:0.32;fill:#515151;enable-background:new    ;}
+.st5{opacity:0.13;fill:#202020;enable-background:new    ;}
+.st6{opacity:0.48;enable-background:new    ;}
+.st7{fill:#685E58;}
+.st8{fill:#FFFFFF;}
+.st9{fill:#FED8C2;}
+.st10{opacity:0.31;fill:#343434;enable-background:new    ;}
+.st11{fill:#FEC9AA;}
+.st12{fill:#E4DAD9;}
+.st13{opacity:0.31;fill:#4E4E4E;enable-background:new    ;}
+.st14{fill:#D8CAC9;}
+.st15{fill:#E3D9D8;}
+.st16{fill:#F1EDED;}
+.st17{fill:#D7C8C8;}
+.st18{fill:#DED2D1;}
+.st19{fill:#E0D5D5;}
+.st20{fill:#292929;}
+.st21{fill:#B46D5C;}
+.st22{fill:#CA988C;}
+.st23{fill:#F5F3F2;}
+.st24{fill:#E7DFDF;}
+.st25{fill:#303030;}
+.st26{fill:#94321A;}
+.st27{fill:#FECE71;}
+.st28{fill:#FDFBFB;}
+.st29{fill:#FEDD99;}
+.st30{fill:#FCFBFB;}
+.st31{fill:#E1A739;}
+.st32{fill:#B46D5B;}
+.st33{fill:#5F0000;}
+.st34{fill:#4E4E4E;}
+.st35{fill:#6C6C6C;}
+.st36{fill:#600000;}
+.st37{fill:#010100;}
+.st38{opacity:0.95;fill:#6D5830;enable-background:new    ;}
+.st39{fill:#55514A;}
+.st40{fill:#FEDD9A;}
+.st41{fill:#B18A43;}
+.st42{fill:#C8AD7C;}
+.st43{fill:#FECF71;}
+.st44{fill:#4D4D4D;}
+.st45{fill:#2F2F2F;}
+.st46{fill:#FEFEFE;}
+.st47{fill:#E0A739;}
+.st48{fill:#CEBCBB;}
+.st49{fill:#FFFEFE;}
+
+.progress-bar .progress{
+    max-width: 100%;
+}
+
+
+
+/* $easingFunction: cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+
+* {
+	box-sizing: border-box;
+}
+
+.sr-only {
+	visibility: hidden;
+}
+
+.hidden {
+	width: 0;
+	height: 0;
+	visibility: hidden;
+	display: none;
+	overflow: hidden;
+}
+
+html {
+	font-size: 16px;
+}
+
+body {
+	display: flex;
+	padding: 0;
+	margin: 0;
+	align-items: center;
+	flex-direction: column;
+	min-height: 100vh;
+	font-family: "Overlock", cursive;
+	position: relative;
+	background-color: lighten(#d1d5da, 12%);
+}
+
+.challenge-title {
+	text-align: center;
+	padding: 0;
+	margin: 1rem 0 0.5rem;
+	color: #fece71;
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.challenge-subtitle {
+	text-align: center;
+	margin: 0;
+	font-size: 1.125rem;
+	font-weight: 400;
+	color: darken(#d1d5da, 10%);
+}
+
+.challenge-part-of {
+	text-align: center;
+	margin: 1rem 0 0;
+	font-size: 0.875rem;
+	color: darken(#d1d5da, 10%);
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+}
+.challenge-part-of a,
+.challenge-part-of a:visited {
+		color: darken(#d1d5da, 10%);
+		text-decoration-style: wavy;
+}
+.challenge-part-of a:hover,
+.challenge-part-of a:active {
+			color: lighten(darken(#d1d5da, 10%), 10%);
+		}
+
+
+.progress-bar {
+	margin: 5rem 0;
+	border: 1px solid lighten(#d1d5da, 10%);
+	border-radius: 10px;
+	width: 1000px;
+	height: 20px;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+		rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+	position: relative;
+	background-color: white;
+}
+.progress-bar.progress,
+.progress-bar.progress-effect,
+.progress-bar.milestone {
+		position: absolute;
+	}
+	.progress {
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 0;
+		background-color: #fece71;
+		border-radius: 10px;
+		z-index: 5;
+		/* transition: all 0.3 $easingFunction; */
+	}
+	.progress .onepunchman {
+			width: 50px;
+			height: 70px;
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translate(12.5%, -60%) rotate(25deg);
+			z-index: 5;
+			/* transition: all 0.3s $easingFunction; */
+	}
+	.progress:hover {
+				transform: scale(5);
+				z-index: 100;
+			}
+		
+		.onepunchman:hover + .bubble {
+			opacity: 1;
+			transform: translate(calc(100% + 120px), -100%);
+		}
+		.bubble {
+			pointer-events: none;
+			position: absolute;
+			background-color: white;
+			border-radius: 0.5em;
+			top: 0;
+			right: 0;
+			width: 250px;
+			height: 125px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 1rem;
+			font-size: 1.25rem;
+			font-weight: bold;
+			transform: translate(calc(100% + 110px), -100%);
+			/* transition: all 0.3s $easingFunction; */
+			opacity: 0;
+		}
+			.bubble::after {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 50%;
+				width: 0;
+				height: 0;
+				border: 20px solid transparent;
+				border-right-color: white;
+				border-left: 0;
+				border-bottom: 0;
+				margin-top: -10px;
+				margin-left: -20px;
+			}
+		
+		.value {
+			position: absolute;
+			top: 0;
+			right: 0;
+			font-weight: bold;
+			color: #2f363d;
+			transform: translate(15px, -55px);
+			z-index: 6;
+		}
+	
+	.progress-effect {
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		overflow: hidden;
+		z-index: 2;
+
+	}
+		.progress-effect::before {
+			content: "";
+			position: absolute;
+			left: -50%;
+			top: 50%;
+			width: 50%;
+			height: 120%;
+			transform: translateY(-50%);
+			background: rgb(255, 233, 192);
+			background: linear-gradient(
+				90deg,
+				rgba(255, 233, 192, 0) 0%,
+				rgba(255, 252, 246, 0.5) 50%,
+				rgba(255, 233, 192, 0) 100%
+			);
+			/* animation: loading 3s $easingFunction infinite; */
+			z-index: 4;
+		}
+	
+	.milestone {
+		bottom: -65px;
+		opacity: 0;
+		left: 0;
+		transform: translateX(-50%);
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+		border: 1px solid lighten(#d1d5da, 10%);
+		background-color: white;
+		z-index: 1;
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+			rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+		white-space: nowrap;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 0.001rem;
+		cursor: pointer;
+		/* transition: all 0.3s $easingFunction; */
+		/* animation: slideIn 1s $easingFunction forwards; */
+	}
+	.milestone:hover {
+			border-color: transparent;
+			background-color: transparent;
+			font-size: 1.5rem;
+	}
+	.milestone::before {
+			content: attr(data-date);
+			position: absolute;
+			bottom: -30px;
+			left: 50%;
+			transform: translateX(-50%);
+			white-space: nowrap;
+			font-size: 0.75rem;
+			font-weight: bold;
+	}
+	.milestone.reached {
+			background-color: darken(#fece71, 10%);
+		
+	}
+
+.remaining-days {
+	font-size: 2rem;
+	margin: 3rem 0;
+	padding: 2rem 3rem;
+	background-color: white;
+	border: 1px solid lighten(#d1d5da, 10%);
+	color: lighten(#2f363d, 50%);
+	border-radius: 0.5rem;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+.remaining-days .remaining-value {
+		color: #2f363d;
+	}
+
+
+@keyframes loading {
+	from {
+		left: -50%;
+	}
+	to {
+		left: 150%;
+	}
+}
+
+@keyframes slideIn {
+	from {
+		bottom: -65px;
+		opacity: 0;
+	}
+	to {
+		bottom: -45px;
+		opacity: 1;
+	}
+}

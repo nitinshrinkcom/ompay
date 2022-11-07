@@ -1,0 +1,123 @@
+/*SECOND PROGRESS BAR*/
+
+.animation-bar-2 {
+    padding: 15px;
+    margin: 35px;
+    position: relative;
+    display: block;
+    font-size: 16px;
+    line-height: 16px;
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+    border-radius: 1.8rem;
+}
+
+.animation-bar-2 span {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    height: 20px;
+    background-size: 100%;
+    border-radius: 1.8rem;
+    background-color: rgb(36, 89, 124);
+    background: linear-gradient(351deg, rgba(36, 89, 124, 1) 35%, rgba(146, 172, 190, 1) 100%);
+    animation: progress-anim-2 10s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+.animation-bar-2 span:before {
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    /* border-top-color: #FFFFFF; */
+    content: "";
+}
+
+.animation-bar-2 span:after {
+    position: absolute;
+    right: 0px;
+    bottom: -11px;
+    z-index: 1;
+    display: inline-block;
+    content: attr(data-label);
+    padding: 5px;
+    border-radius: 3px;
+    height: 30px;
+    width: 40px;
+    font-size: 0.8em;
+    background-image: url('../img/push1.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@keyframes progress-anim-2 {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 50%;
+    }
+}
+
+.AppStatus_oneProgress_style {
+    width: 14%;
+}
+
+.AppStatus_oneProgress_style>p {
+    line-height: 1.2 !important;
+}
+
+.AppStatus_twoProgress_style {
+    width: 14%;
+}
+
+.AppStatus_twoProgress_style>p {
+    line-height: 1.2 !important;
+}
+
+.AppStatus_threeProgress_style {
+    width: 14%;
+}
+
+.AppStatus_threeProgress_style>p {
+    line-height: 1.2 !important;
+}
+
+.AppStatus_fourProgress_style {
+    width: 14%;
+}
+
+.AppStatus_fourProgress_style>p {
+    line-height: 1.2 !important;
+}
+
+.AppStatus_fiveProgress_style {
+    width: 14%;
+}
+
+.AppStatus_fiveProgress_style>p {
+    line-height: 1.2 !important;
+}
+
+.AppStatus_sixProgress_style {
+    width: 14%;
+}
+
+.AppStatus_sixProgress_style>p {
+    line-height: 1.2 !important;
+}
+
+.AppStatus_sevenProgress_style {
+    width: 14%;
+}
+
+.AppStatus_sevenProgress_style>p {
+    line-height: 1.2 !important;
+}
