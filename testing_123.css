@@ -1,0 +1,160 @@
+.card-like {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #000;
+    /* background: rgba(0, 0, 0, 0.8); */
+    border-radius: 6px;
+    padding: 50px;
+    /* box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); */
+}
+
+.btn-irv {
+    width: 15% !important;
+    background: linear-gradient(270deg, rgb(36 89 124) 0%, rgb(33 59 96) 100%) !important;
+    color: #fff !important;
+    font-weight: bold;
+    padding: 10px 0;
+    transition: all 0.3s;
+}
+
+.btn-irv-default {
+    font-weight: bold;
+    background: #bbb;
+    color: #fff !important;
+}
+
+.btn-irv-default:hover {
+    background: #000;
+}
+
+.wizard {
+    overflow: hidden;
+}
+
+.wizard .wizard-header {
+    margin-bottom: 30px;
+}
+
+.wizard .wizard-header hr {
+    border-top-width: 2px;
+}
+
+a.btn.btn-warning.ml-sm-n3.mt-0.mt-1.px-2 {
+    background: #169103 !important;
+    border-color: #169103 !important;
+}
+
+
+/* .wizard .wizard-header .steps {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+} */
+
+.wizard .wizard-header .steps .wizard-step {
+    background: #234B6F;
+    width: 2px;
+    height: 4rem;
+    margin: 0 10px;
+    opacity: 0.2;
+    transition: all 0.8s;
+}
+
+.wizard .wizard-header .steps .wizard-step.active {
+    opacity: 1;
+    background: #234B6F;
+}
+
+.wizard .wizard-body {
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.68, -0.3, 0.37, 0.6);
+}
+
+.wizard .wizard-body .step {
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: -100%;
+    opacity: 0;
+}
+
+.wizard .wizard-body .step.initial {
+    position: relative;
+}
+
+.step {
+    height: 600px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+/* width */
+
+.step::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+/* Track */
+
+.step::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+/* Handle */
+
+.step::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+
+/* Handle on hover */
+
+.step::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.wizard .wizard-body .step.off {
+    opacity: 0 !important;
+    right: 100% !important;
+}
+
+.wizard .wizard-body .step.active {
+    right: 0;
+    margin-left: 0;
+    margin-top: 0;
+    opacity: 1;
+    transition: all 0.4s linear;
+    transition-delay: 0.1s;
+    padding-right: 10px;
+}
+
+.wizard .wizard-footer {
+    margin-top: 30px;
+}
+
+span.text-start {
+    margin-left: 15px;
+    white-space: nowrap;
+    color: #234B6F;
+    font-weight: 700;
+}
+
+.Company {
+    display: block;
+}
+
+.Non-Profit,
+.individual/sole_trader,
+.Trust {
+    display: none;
+}
+
+.step p {
+    font-size: 15px !important;
+}
